@@ -1,0 +1,26 @@
+---
+title: "SEMANA_6"
+author: "GRUPO_4_DENGUE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 6
+
+LIMPIAR DATA DE UNA COLUMNA QUE CONTENGA NA
+
+```{r}
+#CARGA DE DATOS 
+data <- read_csv("C:/Users/WILHELM/Downloads/dengue.csv")
+```
+
+LIMPIAR DATO DE UNA COLUMNA
+
+```{r}
+#LIMPIAR DATA DE UNA COLUMNA QUE CONTENGA FILAS CON NA
+data_limpia<- data[!is.na(data$Edad), ]
+```

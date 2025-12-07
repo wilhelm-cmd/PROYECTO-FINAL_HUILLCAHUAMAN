@@ -1,0 +1,31 @@
+---
+title: "SEMANA_4"
+author: "GRUPO_4_DENGUE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 4
+
+COMO DESCARGAR UN ARCHIVO EN FOMRATO CSV DEL REPOSITORIO GIBHUB
+
+```{r}
+#COMO DESCARGAR UN ARCHIVO EN FORMATO CSV DEL REPOSITORIO GIBHUB
+
+#PASO 1.- DESCARGAMOS LA GUIA PRACTICA DEL CURSO
+#PASO 2.- BUSCAMOS EL LINK DEL REPOSITORIO GIBHUB(Pag. 18)
+#PASO 3.- CLIC EN DATA
+#PASO 4.- CLIC EN LA DATA DE LA SEMANA INDICADA POR EL DOCENTE
+#PASO 5.- EN LA PARTE DERECHA HAY UNA FLECHITA DE DESCARGA (CLIC)
+#PASO 6.- ELEGIMOS LA CARPETA DONDE QUEREMOS GUARDARLO
+#PASO 7.- CLIC EN GUARDAR 
+```
+
+```{r}
+#| echo: false
+2 * 2
+```

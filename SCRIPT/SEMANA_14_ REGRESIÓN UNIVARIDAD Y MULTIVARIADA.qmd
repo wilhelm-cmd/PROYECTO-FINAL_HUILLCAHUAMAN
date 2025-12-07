@@ -1,0 +1,77 @@
+---
+title: "SEMANA_14"
+author: "GRUPO_4_DENGUE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 14
+
+ANALISIS DE REGRESION UNIVARIADO Y MULTIVARIADO
+
+REGRESIÓN LINEAL UNIVARIADO
+
+```{r}
+#REGRESIÓN LINEAL UNIVARIDA
+#CARGA DE DATOS 
+data <- read_csv("C:/Users/WILHELM/Downloads/dengue.csv")
+
+set.seed(123)
+n <- 100
+IMC <- rnorm(n, 27, 4)
+PAS <- 90 + 1.5*IMC + rnorm(n, 0, 8)
+
+datos <- data.frame(IMC, PAS)
+head(datos)
+```
+
+```{r}
+#AJUSTAR MODELO
+modelo_uni <- lm(PAS ~ IMC, data = datos)
+summary(modelo_uni)
+```
+
+```{r}
+#GRAFICO
+plot(datos$IMC, datos$PAS, main="PAS vs IMC", xlab="IMC", ylab="PAS")
+abline(modelo_uni, lwd=2)
+```
+
+REGRESIÓN MULTIVARIADO
+
+```{r}
+#REGRESIÓN LINEAL UNIVARIDA
+#CARGA DE DATOS 
+data <- read_csv("C:/Users/WILHELM/Downloads/dengue.csv")
+
+set.seed(123)
+n <- 120
+
+IMC <- rnorm(n, 27, 4)
+Edad <- rnorm(n, 45, 10)
+Actividad <- rnorm(n, 3, 1)   # horas por semana
+```
+
+```{r}
+# Modelo real para generar datos
+PAS <- 80 + 1.2*IMC + 0.6*Edad - 2.5*Actividad + rnorm(n, 0, 10)
+
+datos2 <- data.frame(IMC, Edad, Actividad, PAS)
+head(datos2)
+```
+
+```{r}
+#AJUSTAR MODELO MULTIPLE
+modelo_multi <- lm(PAS ~ IMC + Edad + Actividad, data = datos2)
+summary(modelo_multi)
+```
+
+```{r}
+#DIAGNOSTICO DEL MODELO 
+par(mfrow=c(2,2))
+plot(modelo_multi)
+```

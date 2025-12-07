@@ -1,0 +1,37 @@
+---
+title: "SEMANA_6"
+author: "GRUPO_4_DENGUE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 10
+
+CALCULAR LAS MEDIDAS DE TENDENCIA CENTRAL (MEDIA ARITMETICA, MEDIANA Y MODA)
+
+```{r}
+#CARGA DE DATOS
+data <- read_csv("~/dengue.csv")
+```
+
+SACAR MEDIA , MEDIANA , MODA
+
+```{r}
+#MEDIA ARITMETICA
+mean (data$Edad)
+```
+
+```{r}
+#MEDIANA ARITMETICA
+median (data$Edad)
+```
+
+```{r}
+#MODA
+mode_edad<-names(sort(table(data$Edad),decreasing = TRUE))[1]
+
+```

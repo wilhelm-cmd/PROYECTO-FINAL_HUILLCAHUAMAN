@@ -1,0 +1,30 @@
+---
+title: "SEMANA_8"
+author: "GRUPO_4_DENGUE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## SEMANA 8 
+
+COMO INSTALAR UN PAQUETE EN RSTUDIO-REALIZA TU GRAFICO ESTADISTICO (HISTOGRAMA
+
+```{r}
+#INSTALAR PAQUETE GGPLOT2
+```
+
+```{r}
+#IMPORTAMOS LA BASE DE DATOS
+data <- read_csv("C:/Users/hp/Downloads/dengue (1).csv")
+View(dengue_1_)
+```
+
+```{r}
+#VISUALIZACIÓN DE GRAFICOS
+#HISTOGRAMA
+ggplot(data,aes(x=Edad))+geom_histogram(bins=30)+theme_minimal()
+```

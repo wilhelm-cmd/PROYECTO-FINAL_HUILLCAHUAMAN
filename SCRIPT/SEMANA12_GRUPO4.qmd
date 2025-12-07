@@ -1,0 +1,49 @@
+---
+title: "SEMANA12"
+author: "GRUPO_4_DENGUE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+MEDIDAS DE DISPERSIÓN
+
+```{r}
+#VARIANZA
+var(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#DESVIACIÓN ESTANDAR
+sd(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#RANGO
+range(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#RANGO INTERCUARTILICO
+IQR(data$Edad,na.rm = TRUE)
+```
+
+```{r}
+#CUARTIL
+quantile(data$Edad)
+```
+
+```{r}
+#VER LAS 6 PRIMERAS FILAS
+head(data)
+```
+
+```{r}
+#RESUMEN DE DATOS
+summary(data)
+```
